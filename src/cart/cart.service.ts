@@ -87,6 +87,7 @@ export class CartService {
 
     if (itemIndex > -1) {
       cart.items.slice(itemIndex, 1);
+      this.recalculateCart(cart);
       return cart.save();
     }
   }
